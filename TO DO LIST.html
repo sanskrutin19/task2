@@ -7,14 +7,42 @@
     <link rel="stylesheet" href="styles4.css">
 </head>
 <body>
-    <div class="todo-container">
-        <h2>To-Do List</h2>
-        <div class="input-container">
-            <input type="text" id="taskInput" placeholder="Add a new task...">
-            <button onclick="addTask()">Add</button>
+
+    <div id="app">
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <h2>📌 Categories</h2>
+            <ul id="taskCategories">
+                <li data-category="All">📋 All Tasks</li>
+                <li data-category="Study">📖 Study</li>
+                <li data-category="Shopping">🛒 Shopping</li>
+                <li data-category="Exercise">💪 Exercise</li>
+                <li data-category="Goals">🎯 Goals</li>
+            </ul>
+            <div id="stickyNote">😊</div>
         </div>
-        <ul id="taskList"></ul>
+
+        <!-- Main Content -->
+        <div id="main-content">
+            <h1>To-Do List</h1>
+
+            <!-- Add Task Section -->
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Enter your task...">
+                <select id="categorySelect">
+                    <option value="Study">📖 Study</option>
+                    <option value="Shopping">🛒 Shopping</option>
+                    <option value="Exercise">💪 Exercise</option>
+                    <option value="Goals">🎯 Goals</option>
+                </select>
+                <button id="addTaskBtn">➕ Add Task</button>
+            </div>
+
+            <!-- Task Sections -->
+            <div id="tasksContainer"></div>
+        </div>
     </div>
+
     <script src="script4.js"></script>
 </body>
 </html>

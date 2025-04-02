@@ -1,73 +1,129 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background: #F0FFF0;
 }
 
-.todo-container {
-    background: white;
+#app {
+    display: flex;
+    width: 80%;
+    height: 85vh;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 25%;
+    background: #FFDEE9;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #F7CAD0;
+}
+
+#taskCategories {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+#taskCategories li {
+    padding: 10px;
+    border-radius: 6px;
+    background: #FFC6FF;
+    margin: 8px 0;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+#taskCategories li:hover {
+    background: #FFB6B9;
+}
+
+/* Sticky Note */
+#stickyNote {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-top: auto;
+}
+
+/* Main Content */
+#main-content {
+    width: 75%;
+    padding: 20px;
     text-align: center;
 }
 
-h2 {
-    margin-bottom: 10px;
-}
-
-.input-container {
+/* Add Task Section */
+.input-group {
     display: flex;
     gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.input-group input, .input-group select {
+    padding: 10px;
+    width: 40%;
+    border: 2px solid #FFB6C1;
+    border-radius: 8px;
+    text-align: center;
 }
 
-button {
-    padding: 8px 15px;
-    background-color: #3498db;
-    color: white;
+.input-group button {
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    background: #FFB6C1;
+    color: white;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.2s;
 }
 
-button:hover {
-    background-color: #2980b9;
+.input-group button:hover {
+    transform: scale(1.1);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
+/* Task List */
+.task-category {
+    margin-top: 20px;
+    padding: 10px;
+    background: #FFEEF3;
+    border-radius: 8px;
 }
 
-li {
-    background: #eee;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 5px;
+.task-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    background: #E6E6FA;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    transition: all 0.3s;
 }
 
-li button {
-    background: red;
-    border: none;
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
+.task-item .pencil {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.task-item .highlight {
+    margin-left: 10px;
     cursor: pointer;
 }
